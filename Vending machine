@@ -1,0 +1,232 @@
+item_1= {'Item Code':'AA',   'Item Name':'Water',      'Item price':1,    'item stock':3}
+item_2= {'Item Code':'AB',   'Item Name':'Pepsi',      'Item price':3.5,  'item stock':6}
+item_3= {'Item Code':'AC',   'Item Name':'Redbull',    'Item price':6.5,  'item stock':1}
+item_4= {'Item Code':'AD',   'Item Name':'Skittles',   'Item price':3,    'item stock':2}
+item_5= {'Item Code':'AE',   'Item Name':'Croissant',  'Item price':2.5,  'item stock':6}
+item_6= {'Item Code':'AF',   'Item Name':'Kit-Kat',    'Item price':1.5,  'item stock':3}
+item_7= {'Item Code':'AG',   'Item Name':'Cheetos',    'Item price':3.5,  'item stock':6}
+item_8= {'Item Code':'AH',   'Item Name':'Milkyway',   'Item price':3,    'item stock':0}
+item_9= {'Item Code':'AI',   'Item Name':'Mars',       'Item price':3,    'item stock':4}
+item_10={'Item Code':'AJ',   'Item Name':'Galaxy',     'Item price':3,    'item stock':9}
+item_11={'Item Code':'AK',   'Item Name':'Fanta',      'Item price':2.5,  'item stock':8}
+item_12={'Item Code':'AL',   'Item Name':'snickers',   'Item price':3.5,  'item stock':2}
+
+products=[item_1,item_2,item_3,item_4,item_5,item_6,item_7,item_8,item_9,item_10,item_11,item_12]
+
+
+print('----------WELCOME TO THE VENDING MACHINE-----------')  #print statement to welcome you to my vending machnine 
+ 
+for item in products:   
+  print(f"{item['Item Code']}       \t  \t{item['Item Name']}      \t  \t {item['Item price']}")
+# for loop which iterates over the food products and prints the code,name and price in order format.   
+  
+money_am = float(input("Enter the amount of money: "))
+print("Amount of money received:", money_am)
+pd_code = input("Enter the product code: ")
+#prints the message to enter the amount of money and the product code
+
+def AA():
+    item_1["item stock"]
+    if item_1["item stock"] != 0: #If the stock is not equal to 0 then it will continue with the program otherwise it stops and prints "the item is out of stock"
+     if money_am >= item_1["Item price"]: #When the amount of money inputed is greater than the price of product  it will proceed with the program otherwise it tells the user how much more money is needed
+         change = money_am - item_1["Item price"]
+         print("\nDispensing a bottle of water")
+         print("Your change is" , change)
+         item_1["item stock"] -= 1   #Takes away 1 stock when dispensed
+         print("Stock left:", item_1["item stock"]) #Prints the stock after product is dispensed
+     else:
+         remain = item_1["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) #Shows how much money is pending
+    else:
+        print("The item is out of Stock")
+
+def AB():
+    item_2["item stock"]
+    if item_2["item stock"] != 0:  
+     if money_am >= item_2["Item price"]: 
+         change = money_am - item_2["Item price"]
+         print("\nDispensing a can of pepsi")
+         print("Your change is" , change)
+         item_2["item stock"] -= 1   
+         print("Stock left:", item_2["item stock"]) 
+     else:
+         remain = item_2["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+
+def AC():
+    item_3["item stock"]
+    if item_3["item stock"]!= 0: 
+     if money_am >=item_3["Item price"] : 
+         change = money_am - item_3["Item price"]
+         print("\nDispensing a Can of redbull")
+         print("Your change is" , change)
+         item_3["item stock"] -= 1   
+         print("Stock left:", item_3["item stock"]) 
+     else:
+         remain = item_3["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+
+def AD():
+    item_4["item stock"]
+    if item_4["item stock"] != 0: 
+     if money_am >= item_4["Item price"]:
+         change = money_am - item_4["Item price"]
+         print("\nDispensing skittles")
+         print("Your change is" , change)
+         item_4["item stock"] -= 1   
+         print("Stock left:", item_4["item stock"])
+     else:
+         remain = item_4["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+
+def AE():
+    item_5["item stock"]
+    if item_5["item stock"]!= 0:
+     if money_am >= item_5["Item price"]: 
+         change = money_am - item_5["Item price"]
+         print("\nDispensing croissant")
+         print("Your change is" , change)
+         item_5["item stock"] -= 1   
+         print("Stock left:", item_5["item stock"]) 
+     else:
+         remain = item_5["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+
+def AF():
+    item_6["item stock"]
+    if item_6["item stock"]!= 0: 
+     if money_am >= item_6["Item price"]: 
+         change = money_am - item_6["Item price"]
+         print("\nDispensing kitkat")
+         print("Your change is" , change)
+         item_6["item stock"] -= 1   
+         print("Stock left:", item_6["item stock"]) 
+     else:
+         remain = item_6["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+
+def AG():
+    item_7["item stock"]
+    if item_7["item stock"] != 0: 
+     if money_am >= item_7["Item price"]: 
+         change = money_am - item_7["Item price"]
+         print("\nDispensing cheetos")
+         print("Your change is" , change)
+         item_7["item stock"] -= 1   
+         print("Stock left:", item_7["item stock"])
+     else:
+         remain = item_7["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain)
+    else:
+        print("The item is out of Stock")
+
+def AH():
+    item_8["item stock"]
+    if item_8["item stock"] != 0: 
+     if money_am >= item_8["Item price"]: 
+         change = money_am - item_8["Item price"]
+         print("\nDispensing milkyway")
+         print("Your change is" , change)
+         item_8["item stock"] -= 1   
+         print("Stock left:", item_8["item stock"]) 
+     else:
+         remain = item_8["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain)
+    else:
+        print("The item is out of Stock")
+        
+def AI():
+    item_9["item stock"]
+    if item_9["item stock"]!= 0: 
+     if money_am >= item_9["Item price"]:
+         change = money_am - item_9["Item price"]
+         print("\nDispensing mars")
+         print("Your change is" , change)
+         item_9["item stock"] -= 1   
+         print("Stock left:", item_9["item stock"]) 
+     else:
+         remain = item_9["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+
+def AJ():
+    item_10["item stock"]
+    if item_10["item stock"] != 0: 
+     if money_am >= item_10["Item price"]: 
+         change = money_am - item_10["Item price"]
+         print("\nDispensing galaxy")
+         print("Your change is" , change)
+         item_10["item stock"] -= 1   
+         print("Stock left:", item_10["item stock"]) 
+     else:
+         remain = item_10["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+                
+def AK():
+    item_11["item stock"]
+    if item_11["item stock"] != 0: 
+     if money_am >= item_11["Item price"]: 
+         change = money_am - item_11["Item price"]
+         print("\nDispensing fanta")
+         print("Your change is" , change)
+         item_11["item stock"] -= 1   
+         print("Stock left:", item_11["item stock"]) 
+     else:
+         remain = item_11["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+
+def AL():
+    item_12["item stock"]
+    if item_12["item stock"] != 0: 
+     if money_am >= item_12["Item price"]: 
+         change = money_am - item_12["Item price"]
+         print("\nDispensing snickers")
+         print("Your change is" , change)
+         item_12["item stock"] -= 1   
+         print("Stock left:", item_12["item stock"]) 
+     else:
+         remain = item_12["Item price"] - money_am
+         print("Cash insufficient. Amount pending:", remain) 
+    else:
+        print("The item is out of Stock")
+                
+                
+if pd_code== "AA":
+    AA()
+elif pd_code== "AB":
+    AB()
+elif pd_code== "AC":
+    AC()
+elif pd_code== "AD":
+    AD()
+elif pd_code== "AE":
+    AE()
+elif pd_code== "AF":
+    AF()
+elif pd_code== "AG":
+    AG()
+elif pd_code== "AH":
+    AH()
+elif pd_code== "AI":
+    AI()
+elif pd_code== "AJ":
+    AJ()
+elif pd_code== "Ak":
+    AK()
+elif pd_code== "AL":
+    AL()

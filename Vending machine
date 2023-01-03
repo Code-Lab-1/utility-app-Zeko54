@@ -226,7 +226,7 @@ elif pd_code== "AI":
     AI()
 elif pd_code== "AJ":
     AJ()
-elif pd_code== "Ak":
+elif pd_code== "AK":
     AK()
 elif pd_code== "AL":
     AL()

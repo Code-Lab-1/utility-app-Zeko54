@@ -204,8 +204,7 @@ def AL():
          print("Cash insufficient. Amount pending:", remain) 
     else:
         print("The item is out of Stock")
-                
-                
+                               
 if pd_code== "AA":
     AA()
 elif pd_code== "AB":

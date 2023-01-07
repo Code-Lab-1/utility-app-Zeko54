@@ -92,3 +92,5 @@ for item in sorted_products[:5]:
 
 # Display a message thanking the user for using the vending machine
 print("\nThank you for using the vending machine. Have a nice day!")
+
+

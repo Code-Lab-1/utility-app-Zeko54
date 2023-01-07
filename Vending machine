@@ -1,17 +1,17 @@
 # Store the product details in a list of dictionaries
 products = [
-    {'Item Code':'AA', 'Item Name':'Water', 'Item price':1, 'item stock':3},
-    {'Item Code':'AB', 'Item Name':'Pepsi', 'Item price':3.5, 'item stock':6},
-    {'Item Code':'AC', 'Item Name':'Redbull', 'Item price':6.5, 'item stock':1},
-    {'Item Code':'AD', 'Item Name':'Skittles', 'Item price':3, 'item stock':2},
-    {'Item Code':'AE', 'Item Name':'Croissant', 'Item price':2.5, 'item stock':6},
-    {'Item Code':'AF', 'Item Name':'Kit-Kat', 'Item price':1.5, 'item stock':3},
-    {'Item Code':'AG', 'Item Name':'Cheetos', 'Item price':3.5, 'item stock':6},
-    {'Item Code':'AH', 'Item Name':'Milkyway', 'Item price':3, 'item stock':0},
-    {'Item Code':'AI', 'Item Name':'Mars', 'Item price':3, 'item stock':4},
-    {'Item Code':'AJ', 'Item Name':'Galaxy', 'Item price':3, 'item stock':9},
-    {'Item Code':'AK', 'Item Name':'Fanta', 'Item price':2.5, 'item stock':8},
-    {'Item Code':'AL', 'Item Name':'snickers', 'Item price':3.5, 'item stock':2}
+    {'Item Code':'AA',  'Item Name':'Water',     'Item price':1,    'item stock':3, 'units sold':20},
+    {'Item Code':'AB',  'Item Name':'Pepsi',     'Item price':3.5,  'item stock':6, 'units sold':5},
+    {'Item Code':'AC',  'Item Name':'Redbull',   'Item price':6.5,  'item stock':1, 'units sold':4},
+    {'Item Code':'AD',  'Item Name':'Skittles',  'Item price':3,    'item stock':2, 'units sold':6},
+    {'Item Code':'AE',  'Item Name':'Croissant', 'Item price':2.5,  'item stock':6, 'units sold':8},
+    {'Item Code':'AF',  'Item Name':'Kit-Kat',   'Item price':1.5,  'item stock':3, 'units sold':12},
+    {'Item Code':'AG',  'Item Name':'Cheetos',   'Item price':3.5,  'item stock':6, 'units sold':7},
+    {'Item Code':'AH',  'Item Name':'Milkyway',  'Item price':3,    'item stock':0, 'units sold':10},
+    {'Item Code':'AI',  'Item Name':'Mars',      'Item price':3,    'item stock':4, 'units sold':4},
+    {'Item Code':'AJ',  'Item Name':'Galaxy',    'Item price':3,    'item stock':9, 'units sold':2},
+    {'Item Code':'AK',  'Item Name':'Fanta',     'Item price':2.5,  'item stock':8, 'units sold':3},
+    {'Item Code':'AL',  'Item Name':'snickers',  'Item price':3.5,  'item stock':2, 'units sold':22}
 ]
 
 # Print a welcome message and the product details
@@ -26,15 +26,29 @@ except ValueError:
     print("Invalid amount of money")
     exit()
 
-# Loop until the user wants to stop
+# Loop until the user wants to stop or the balance is 0
 while True:
-    # Get the product code from the user
-    pd_code = input("Enter the product code (or 'stop' to exit): ")
-    if pd_code.lower() == 'stop':
+    if money_am == 0:
+        print("\nYour balance is 0. The vending machine will now stop.")
         break
 
+    # Get the product code or command from the user
+    pd_code = input("Enter the product code (or 'stop' to exit, or 'add' to add money): ")
+    if pd_code.lower() == 'stop':
+        break
+    elif pd_code.lower() == 'add':
+        # Allow the user to add more money to their balance
+        try:
+            add_am = float(input("Enter the amount of money to add: "))
+        except ValueError:
+            print("Invalid amount of money")
+            continue
+        money_am += add_am
+        print(f"\nYour balance is now {money_am}")
+        continue
+
     if pd_code == "":
-        print("Please enter a valid product code")
+        print("Please enter a valid product code or command")
         continue
 
     # Find the product with the given code
@@ -56,25 +70,25 @@ while True:
             # If the amount of money is sufficient, dispense the product
             money_am -= product["Item price"]
             product["item stock"] -= 1
+            product["units sold"] += 1
             print(f"\nDispensing a {product['Item Name']}")
-            print(f"Your change is {money_am}")
+            print(f"Your balance is  {money_am}")
             print(f"Stock left: {product['item stock']}")
         else:
-            # If the amount of money is not sufficient, show an error message and the available change
+            # If the amount of money is not sufficient, show an error message and the available balance
             print("Insufficient money")
-            print(f"Available change: {money_am}")
+            print(f"Your balance is {money_am}")
     else:
         print("\nThis product is out of stock")
 
-# Find the most popular product
-most_popular_product = products[8]
-for item in products:
-    if item['item stock'] > most_popular_product['item stock']:
-        most_popular_product = item
+# Sort the list of products by the number of units sold in descending order
+sorted_products = sorted(products, key=lambda x: x['units sold'], reverse=True)
 
-# Display the most popular product
-print(f"\nThe most popular product is {most_popular_product['Item Name']} with {most_popular_product['item stock']} units sold.")
+# Display the top 5 most popular products
+print("\nThe most popular products are:")
+for item in sorted_products[:5]:
+    print(f"{item['Item Name']} ({item['units sold']} Units sold)")
+
 
 # Display a message thanking the user for using the vending machine
-print("\nThank you for using the vending machine!")
-
+print("\nThank you for using the vending machine. Have a nice day!")

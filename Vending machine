@@ -1,17 +1,17 @@
 # Store the product details in a list of dictionaries
 products = [
     {'Item Code':'AA',  'Item Name':'Water',     'Item price':1,    'item stock':3, 'units sold':20},
-    {'Item Code':'AB',  'Item Name':'Pepsi',     'Item price':3.5,  'item stock':6, 'units sold':5},
-    {'Item Code':'AC',  'Item Name':'Redbull',   'Item price':6.5,  'item stock':1, 'units sold':4},
-    {'Item Code':'AD',  'Item Name':'Skittles',  'Item price':3,    'item stock':2, 'units sold':6},
-    {'Item Code':'AE',  'Item Name':'Croissant', 'Item price':2.5,  'item stock':6, 'units sold':8},
-    {'Item Code':'AF',  'Item Name':'Kit-Kat',   'Item price':1.5,  'item stock':3, 'units sold':12},
-    {'Item Code':'AG',  'Item Name':'Cheetos',   'Item price':3.5,  'item stock':6, 'units sold':7},
-    {'Item Code':'AH',  'Item Name':'Milkyway',  'Item price':3,    'item stock':0, 'units sold':10},
-    {'Item Code':'AI',  'Item Name':'Mars',      'Item price':3,    'item stock':4, 'units sold':4},
-    {'Item Code':'AJ',  'Item Name':'Galaxy',    'Item price':3,    'item stock':9, 'units sold':2},
-    {'Item Code':'AK',  'Item Name':'Fanta',     'Item price':2.5,  'item stock':8, 'units sold':3},
-    {'Item Code':'AL',  'Item Name':'snickers',  'Item price':3.5,  'item stock':2, 'units sold':22}
+    {'Item Code':'AB',  'Item Name':'Pepsi',     'Item price':3.5,  'item stock':6, 'units sold':19},
+    {'Item Code':'AC',  'Item Name':'Redbull',   'Item price':6.5,  'item stock':1, 'units sold':6},
+    {'Item Code':'AD',  'Item Name':'Skittles',  'Item price':3,    'item stock':2, 'units sold':8},
+    {'Item Code':'AE',  'Item Name':'Croissant', 'Item price':2.5,  'item stock':6, 'units sold':16},
+    {'Item Code':'AF',  'Item Name':'Kit-Kat',   'Item price':1.5,  'item stock':3, 'units sold':18},
+    {'Item Code':'AG',  'Item Name':'Cheetos',   'Item price':3.5,  'item stock':6, 'units sold':13},
+    {'Item Code':'AH',  'Item Name':'Milkyway',  'Item price':3,    'item stock':0, 'units sold':24},
+    {'Item Code':'AI',  'Item Name':'Mars',      'Item price':3,    'item stock':4, 'units sold':14},
+    {'Item Code':'AJ',  'Item Name':'Galaxy',    'Item price':3,    'item stock':9, 'units sold':7},
+    {'Item Code':'AK',  'Item Name':'Fanta',     'Item price':2.5,  'item stock':8, 'units sold':9},
+    {'Item Code':'AL',  'Item Name':'snickers',  'Item price':3.5,  'item stock':2, 'units sold':12}
 ]
 
 # Print a welcome message and the product details

@@ -81,8 +81,13 @@ while True:
     else:
         print("\nThis product is out of stock")
 
+
+# A function to get the number of units sold for a product
+def get_units_sold(product):
+  return product['units sold']
+
 # Sort the list of products by the number of units sold in descending order
-sorted_products = sorted(products, key=lambda x: x['units sold'], reverse=True)
+sorted_products = sorted(products, key=get_units_sold, reverse=True)
 
 # Display the top 5 most popular products
 print("\nThe most popular products are:")
